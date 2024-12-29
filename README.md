@@ -18,7 +18,7 @@ ProtoBase Client is a simple and lightweight Dart package designed to help devel
 Add the following to your `pubspec.yaml` file:
 ```yaml
 dependencies:
-  proto_base_client: ^0.1.0-dev
+  proto_base_client: ^0.1.1-dev
 ```
 
 Run `flutter pub get` to install the package.

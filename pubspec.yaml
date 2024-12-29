@@ -1,6 +1,6 @@
 name: proto_base_client
 description: A Flutter package for ProtoBase authentication.
-version: 0.1.0-dev
+version: 0.1.1-dev
 homepage: https://github.com/AkiTheMemeGod/Flutter_ProtoBase_Client
 
 environment:
