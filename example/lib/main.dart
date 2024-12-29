@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () async {
               final response = await client.signinWithEmail(
-                'AkiTheMemeGod',
-                'mozorokz123',
-                'k.akashkumar@gmail.com',
+                'Technoblade',
+                'never',
+                'dies@gmail.com',
               );
               print(response.toString());
             },
