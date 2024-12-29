@@ -1,7 +1,7 @@
 name: proto_base_client
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: A Flutter package for ProtoBase authentication.
+version: 0.1.0
+homepage: https://github.com/AkiTheMemeGod/Flutter_ProtoBase_Client
 
 environment:
   sdk: ^3.7.0-183.0.dev
@@ -10,8 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_secure_storage: ^9.2.2
-  http: ^1.2.2
 
 dev_dependencies:
   flutter_test:
