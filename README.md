@@ -12,13 +12,17 @@ ProtoBase Client is a simple and lightweight Dart package designed to help devel
 - **Username-Based Authentication**:
   - Sign up using a username and password.
   - Sign in using a username and password.
+  
+- **API Token-Based Usage**:
+  - Obtain your API key from the [official website](https://protobase.pythonanywhere.com/).
+  - Use the API key to authenticate your requests.
 
 ## Installation
 
 Add the following to your `pubspec.yaml` file:
 ```yaml
 dependencies:
-  proto_base_client: ^0.1.1-dev
+  proto_base_client: ^1.0.0-dev
 ```
 
 Run `flutter pub get` to install the package.
@@ -36,6 +40,7 @@ void main() async {
     'john_doe',
     'securepassword123',
     'john.doe@example.com',
+    'Api Token Here',
   );
   print(signupResponse);
 
@@ -44,6 +49,8 @@ void main() async {
     'john_doe',
     'securepassword123',
     'john.doe@example.com',
+    'Api Token Here',
+
   );
   print(signinResponse);
 }
