@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:proto_base_client/proto_base_client.dart';
 
+import 'home.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -132,13 +134,14 @@ class _MyAppState extends State<MyApp> {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  final response = await client.signinWithEmail(
+                  await client.signinWithEmail(
                     'Technoblade',
                     'never',
                     'dies@gmail.com',
                     'UOUuh6m6lv1OeChrtuZQLCY0VyLIv6aniI8mJgNun3y2lmK5DhgOgu98K1Ei33Zhm903FHNfCUv03cQKpJ5BXA',
+                    context,
+                    HomePage(),
                   );
-                  print(response.toString());
                 },
                 child: Text('Sign Up'),
               ),

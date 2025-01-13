@@ -12,3 +12,9 @@
 
 ## 2.0.1-dev - Version 2.0.1
 - minor patches including api rotue changes
+
+## 2.1.1-dev - Version 2.1.1
+- Added example usage in `main.dart` for database operations.
+- Improved error handling and response handling in `ProtoBaseApiClient`.
+- Updated documentation with new API methods and example usage.
+- Added `HomePage` example in `home.dart`.
