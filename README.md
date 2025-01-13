@@ -1,7 +1,6 @@
-
 # ProtoBase Client
 
-ProtoBase Client is a simple and lightweight Dart package designed to help developers integrate authentication functionalities with ease. It provides methods for signing up and signing in using email or username through the ProtoBase API.
+ProtoBase Client is a simple and lightweight Dart package designed to help developers integrate authentication and database functionalities with ease. It provides methods for signing up and signing in using email or username through the ProtoBase API, as well as methods for database operations.
 
 ## Features
 
@@ -17,12 +16,19 @@ ProtoBase Client is a simple and lightweight Dart package designed to help devel
   - Obtain your API key from the [official website](https://protobase.pythonanywhere.com/).
   - Use the API key to authenticate your requests.
 
+- **Database Operations**:
+  - Create tables.
+  - Insert data into tables.
+  - Read data from tables.
+  - Update data in tables.
+  - Delete data from tables.
+
 ## Installation
 
 Add the following to your `pubspec.yaml` file:
 ```yaml
 dependencies:
-  proto_base_client: ^1.0.1-dev
+  proto_base_client: ^2.0.0
 ```
 
 Run `flutter pub get` to install the package.
@@ -33,26 +39,28 @@ Run `flutter pub get` to install the package.
 import 'package:proto_base_client/proto_base_client.dart';
 
 void main() async {
-  final client = ProtoBaseClient();
-
-  // Sign up using email
+  final client = ProtoBaseApiClient();
+  final dbClient = ProtoBaseDatabaseClient();
+  
+  // Example usage for authentication
   final signupResponse = await client.signupWithEmail(
-    'john_doe',
-    'securepassword123',
-    'john.doe@example.com',
-    'Api Token Here',
+    'username',
+    'password',
+    'email@example.com',
+    'api_token',
   );
   print(signupResponse);
 
-  // Sign in using email
-  final signinResponse = await client.signinWithEmail(
-    'john_doe',
-    'securepassword123',
-    'john.doe@example.com',
-    'Api Token Here',
-
+  // Example usage for database operations
+  final createTableResponse = await dbClient.createTable(
+    'api_token',
+    'username',
+    'project_name',
+    'table_name',
+    ['column1', 'column2'],
+    ['type1', 'type2'],
   );
-  print(signinResponse);
+  print(createTableResponse);
 }
 ```
 
@@ -63,6 +71,11 @@ This package interacts with the following API endpoints:
 - `/auth_api/email-signin/`
 - `/auth_api/user-signup/`
 - `/auth_api/user-signin/`
+- `/api/create_table`
+- `/api/insert_data`
+- `/api/read_data`
+- `/api/update_data`
+- `/api/delete_data`
 
 ## License
 
