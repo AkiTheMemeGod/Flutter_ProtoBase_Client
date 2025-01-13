@@ -48,6 +48,8 @@ void main() async {
     'password',
     'email@example.com',
     'api_token',
+    context,
+    NextPage() // redirect to the page you desire
   );
   print(signupResponse);
 
