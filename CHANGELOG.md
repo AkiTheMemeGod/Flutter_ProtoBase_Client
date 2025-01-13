@@ -9,3 +9,6 @@
 - Improved error handling in API client methods.
 - Added example usage in `main.dart`.
 - Updated documentation with new API methods.
+
+## 2.0.1-dev - Version 2.0.1
+- minor patches including api rotue changes

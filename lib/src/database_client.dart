@@ -23,7 +23,7 @@ class ProtoBaseDatabaseClient {
     List<String> columns,
     List<String> columnTypes,
   ) async {
-    final url = Uri.parse('$_baseUrl/api/create_table');
+    final url = Uri.parse('$_baseUrl/db_api/create_table');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -56,7 +56,7 @@ class ProtoBaseDatabaseClient {
     String table,
     Map<String, dynamic> data,
   ) async {
-    final url = Uri.parse('$_baseUrl/api/insert_data');
+    final url = Uri.parse('$_baseUrl/db_api/insert_data');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -86,7 +86,7 @@ class ProtoBaseDatabaseClient {
     String projectName,
     String table,
   ) async {
-    final url = Uri.parse('$_baseUrl/api/read_data');
+    final url = Uri.parse('$_baseUrl/db_api/read_data');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -119,7 +119,7 @@ class ProtoBaseDatabaseClient {
     String whereClause,
     Map<String, dynamic> updateData,
   ) async {
-    final url = Uri.parse('$_baseUrl/api/update_data');
+    final url = Uri.parse('$_baseUrl/db_api/update_data');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
@@ -152,7 +152,7 @@ class ProtoBaseDatabaseClient {
     String table,
     String condition,
   ) async {
-    final url = Uri.parse('$_baseUrl/api/delete_data');
+    final url = Uri.parse('$_baseUrl/db_api/delete_data');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},

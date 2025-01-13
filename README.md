@@ -28,7 +28,7 @@ ProtoBase Client is a simple and lightweight Dart package designed to help devel
 Add the following to your `pubspec.yaml` file:
 ```yaml
 dependencies:
-  proto_base_client: ^2.0.0
+  proto_base_client: ^2.0.1-dev
 ```
 
 Run `flutter pub get` to install the package.
@@ -71,11 +71,11 @@ This package interacts with the following API endpoints:
 - `/auth_api/email-signin/`
 - `/auth_api/user-signup/`
 - `/auth_api/user-signin/`
-- `/api/create_table`
-- `/api/insert_data`
-- `/api/read_data`
-- `/api/update_data`
-- `/api/delete_data`
+- `/db_api/create_table`
+- `/db_api/insert_data`
+- `/db_api/read_data`
+- `/db_api/update_data`
+- `/db_api/delete_data`
 
 ## License
 
