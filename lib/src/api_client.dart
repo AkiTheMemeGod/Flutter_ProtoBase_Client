@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 /// A client for interacting with the ProtoBase API.
 ///
 /// This client provides methods for signing up and signing in using email or username.
-class ProtoBaseClient {
+class ProtoBaseApiClient {
   static const String _baseUrl = 'https://protobase.pythonanywhere.com';
 
   /// Signs up a user using their email, username, password, and token.
